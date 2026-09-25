@@ -1,0 +1,15 @@
+# Системные файлы
+.DS_Store
+Thumbs.db
+
+# Редакторы
+.vscode/
+.idea/
+
+# Зависимости и сборка (на будущее)
+node_modules/
+dist/
+
+# Секреты
+.env
+.env.*

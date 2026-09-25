@@ -1,0 +1,256 @@
+/* ==========================================================================
+   Адаптивные стили (Mobile First)
+   Базовые стили в style.css рассчитаны на телефон. Здесь раскладка
+   усложняется по мере роста экрана:
+     480px  — большой телефон: карточки в два столбца;
+     768px  — планшет: меню в строку, больше отступы;
+     1024px — ноутбук и десктоп: боковой фильтр, двухколоночные страницы;
+     1280px — широкий экран: четыре карточки в ряд.
+   ========================================================================== */
+
+/* ---------- 480px: большой телефон ---------- */
+@media (min-width: 480px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .categories__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .order-form__row {
+        flex-direction: row;
+    }
+
+    .order-form__row > .form-field--narrow {
+        flex: 0 0 120px;
+    }
+
+    .product__actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .order-form__submit {
+        width: auto;
+        align-self: flex-start;
+    }
+}
+
+/* ---------- 768px: планшет ---------- */
+@media (min-width: 768px) {
+    :root {
+        --header-height: 72px;
+        --font-size-xl: 1.75rem;
+        --font-size-xxl: 2.5rem;
+        --space-xl: 40px;
+        --space-xxl: 64px;
+    }
+
+    /* Только боковые отступы: сокращённая запись padding обнулила бы
+       вертикальные отступы у блоков, которые одновременно .container */
+    .container {
+        padding-left: var(--space-lg);
+        padding-right: var(--space-lg);
+    }
+
+    /* Меню снова в строку, кнопка-бургер не нужна */
+    .header__inner {
+        flex-wrap: nowrap;
+        gap: var(--space-lg);
+    }
+
+    .header__toggle,
+    .table-hint {
+        display: none;
+    }
+
+    .nav,
+    .js .nav {
+        display: block;
+        width: auto;
+        padding-bottom: 0;
+    }
+
+    .nav__list {
+        flex-direction: row;
+    }
+
+    .nav__link {
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    .header__cta {
+        display: inline-flex;
+        margin-left: auto;
+    }
+
+    .hero__title {
+        font-size: 2.5rem;
+    }
+
+    .hero__text {
+        font-size: var(--font-size-lg);
+    }
+
+    .advantages__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reviews {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cta__inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--space-xl);
+    }
+
+    .footer__inner {
+        grid-template-columns: 2fr 1fr 1.4fr;
+    }
+
+    .order-form,
+    .contacts__form {
+        padding: var(--space-xl);
+    }
+
+    .modal__content {
+        padding: var(--space-xl);
+    }
+
+    .specs-table th,
+    .specs-table td,
+    .compare-table th,
+    .compare-table td {
+        padding: var(--space-md) var(--space-lg);
+    }
+}
+
+/* ---------- 1024px: ноутбук и десктоп ---------- */
+@media (min-width: 1024px) {
+    .hero__inner {
+        grid-template-columns: 1.05fr 1fr;
+    }
+
+    .hero__title {
+        font-size: 3rem;
+    }
+
+    .hero__sticker {
+        left: calc(-1 * var(--space-lg));
+        bottom: var(--space-lg);
+    }
+
+    .advantages__list,
+    .categories__list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .category-tile {
+        min-height: 180px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .reviews {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Каталог: фильтр сбоку и «прилипает» при прокрутке */
+    .catalog {
+        grid-template-columns: 260px 1fr;
+    }
+
+    .filter {
+        position: sticky;
+        top: calc(var(--header-height) + var(--space-md));
+        z-index: var(--z-sticky);
+    }
+
+    .product {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product__title {
+        font-size: 2.25rem;
+    }
+
+    .product__price {
+        font-size: 2rem;
+    }
+
+    .order {
+        grid-template-columns: 1fr 340px;
+    }
+
+    .order-summary {
+        position: sticky;
+        top: calc(var(--header-height) + var(--space-md));
+    }
+
+    .contacts {
+        grid-template-columns: 1.1fr 1fr;
+    }
+}
+
+/* ---------- 1280px: широкий экран ---------- */
+@media (min-width: 1280px) {
+    :root {
+        --space-xxl: 72px;
+        --font-size-xxl: 2.75rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* В каталоге часть ширины занимает фильтр, поэтому три столбца */
+    .product-grid--catalog,
+    .product-grid--three {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ---------- КР №4: корзина и шапка ---------- */
+@media (min-width: 640px) {
+    .cart-item {
+        grid-template-columns: 120px 1fr auto auto auto;
+        gap: var(--space-lg);
+    }
+
+    .cart-item__image {
+        grid-row: auto;
+        width: 120px;
+        height: 90px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header__cart {
+        margin-left: auto;
+    }
+
+    .header__cart + .header__cta {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    .cart {
+        grid-template-columns: 1fr 340px;
+    }
+
+    .cart-summary {
+        position: sticky;
+        top: calc(var(--header-height) + var(--space-md));
+    }
+}
