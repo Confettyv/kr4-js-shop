@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спорттовары для тренировок — Рекорд</title>
+    <meta name="description" content="Магазин спорттоваров «Рекорд»: инвентарь для бега, силовых тренировок, фитнеса и командных видов спорта с доставкой по Москве.">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    <header class="header" id="top">
+        <div class="container header__inner">
+            <a class="logo" href="index.html">
+                <span class="logo__mark" aria-hidden="true">R</span>
+                <span class="logo__text">Рекорд</span><span class="visually-hidden"> — на главную</span>
+            </a>
+            <button class="header__toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-nav-toggle>
+                <span class="header__toggle-line" aria-hidden="true"></span>
+                <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <nav class="nav" id="main-nav" aria-label="Основная навигация">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link nav__link--active" href="index.html" aria-current="page">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link" href="catalog.html">Каталог</a></li>
+                    <li class="nav__item"><a class="nav__link" href="delivery.html">Доставка</a></li>
+                    <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <a class="header__cart" href="cart.html">
+                Корзина <span class="header__cart-count" data-cart-count aria-live="polite">0</span>
+            </a>
+            <a class="button button--small header__cta" href="order.html">Оформить заявку</a>
+        </div>
+    </header>
+    <main class="main" id="main">
+        <section class="hero" id="hero" aria-labelledby="hero-title">
+            <div class="container hero__inner">
+                <div class="hero__content">
+                    <p class="hero__eyebrow">Магазин спорттоваров</p>
+                    <h1 class="hero__title" id="hero-title">Инвентарь для тренировок — от первой пробежки до личного рекорда</h1>
+                    <p class="hero__text">Спорттовары для тренировок дома, в зале и на стадионе. Доставка по Москве на следующий день.</p>
+                    <div class="hero__actions">
+                        <a class="button button--large" href="catalog.html">Перейти в каталог</a>
+                        <button class="button button--large button--ghost" type="button" data-modal-open="consult-modal">Подобрать инвентарь</button>
+                    </div>
+                </div>
+                <div class="hero__media">
+                    <picture><source type="image/webp" srcset="images/hero-500.webp 500w, images/hero.webp 1000w" sizes="(min-width: 960px) 45vw, 100vw"><img class="hero__image" src="images/hero-500.jpg" srcset="images/hero-500.jpg 500w, images/hero.jpg 1000w" sizes="(min-width: 960px) 45vw, 100vw" alt="Кроссовки, гиря и футбольный мяч из каталога магазина" width="1000" height="800"></picture>
+                    <p class="hero__sticker">−10% на первый заказ</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section advantages" id="advantages" aria-labelledby="advantages-title">
+            <div class="container">
+                <h2 class="section__title" id="advantages-title">Почему выбирают нас</h2>
+                <ul class="advantages__list">
+                    <li class="advantage">
+                        <span class="advantage__icon" aria-hidden="true">🚚</span>
+                        <h3 class="advantage__title">Доставка за 1 день</h3>
+                        <p class="advantage__text">Привезём заказ по Москве на следующий день после оформления.</p>
+                    </li>
+                    <li class="advantage">
+                        <span class="advantage__icon" aria-hidden="true">👟</span>
+                        <h3 class="advantage__title">Примерка перед оплатой</h3>
+                        <p class="advantage__text">Курьер подождёт, пока вы примерите обувь и одежду.</p>
+                    </li>
+                    <li class="advantage">
+                        <span class="advantage__icon" aria-hidden="true">↩️</span>
+                        <h3 class="advantage__title">Возврат 30 дней</h3>
+                        <p class="advantage__text">Не подошло — вернём деньги без лишних вопросов.</p>
+                    </li>
+                    <li class="advantage">
+                        <span class="advantage__icon" aria-hidden="true">🏋️</span>
+                        <h3 class="advantage__title">Совет тренера</h3>
+                        <p class="advantage__text">Поможем подобрать вес, размер и нагрузку под ваши цели.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section section--muted categories" id="categories" aria-labelledby="categories-title">
+            <div class="container">
+                <h2 class="section__title" id="categories-title">Категории</h2>
+                <ul class="categories__list">
+                <li class="categories__item">
+                    <a class="category-tile category-tile--run" href="catalog.html#run">
+                        <span class="category-tile__title">Бег</span>
+                        <span class="category-tile__text">Кроссовки, жилеты и часы для пробежек</span>
+                    </a>
+                </li>
+                <li class="categories__item">
+                    <a class="category-tile category-tile--power" href="catalog.html#power">
+                        <span class="category-tile__title">Силовые</span>
+                        <span class="category-tile__text">Гантели, гири и турники для дома</span>
+                    </a>
+                </li>
+                <li class="categories__item">
+                    <a class="category-tile category-tile--fit" href="catalog.html#fit">
+                        <span class="category-tile__title">Фитнес и йога</span>
+                        <span class="category-tile__text">Коврики, резинки и скакалки</span>
+                    </a>
+                </li>
+                <li class="categories__item">
+                    <a class="category-tile category-tile--team" href="catalog.html#team">
+                        <span class="category-tile__title">Командные виды</span>
+                        <span class="category-tile__text">Мячи для футбола, баскетбола и волейбола</span>
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section" id="popular" aria-labelledby="popular-title">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title" id="popular-title">Популярные товары</h2>
+                    <a class="section__link" href="catalog.html">Весь каталог →</a>
+                </div>
+                <div class="product-grid" data-popular-list>
+            <article class="product-card">
+                <a class="product-card__image-link" href="product.html?id=1" tabindex="-1" aria-hidden="true">
+                    <picture><source type="image/webp" srcset="images/running-shoes-400.webp 400w, images/running-shoes.webp 800w" sizes="(min-width: 960px) 25vw, (min-width: 640px) 50vw, 100vw"><img class="product-card__image" src="images/running-shoes-400.jpg" srcset="images/running-shoes-400.jpg 400w, images/running-shoes.jpg 800w" sizes="(min-width: 960px) 25vw, (min-width: 640px) 50vw, 100vw" alt="" width="400" height="300" loading="lazy"></picture>
+                </a>
+                <span class="product-card__badge badge badge--sale">Скидка</span>
+                <div class="product-card__body">
+                    <p class="product-card__category">Бег</p>
+                    <h3 class="product-card__title"><a class="product-card__link" href="product.html?id=1">Кроссовки для бега «Темп»</a></h3>
+                    <p class="product-card__text">Лёгкие кроссовки с амортизирующей подошвой для асфальта и стадиона.</p>
+                    <p class="product-card__rating"><span aria-hidden="true">★</span> 4,8<span class="visually-hidden"> из 5</span></p>
+                    <div class="product-card__footer">
+                        <p class="product-card__price">7 490 ₽ <s class="product-card__old-price">8 990 ₽</s></p>
+                        <a class="button button--small" href="order.html">В заявку</a>
+                    </div>
+                </div>
+            </article>
+            <article class="product-card">
+                <a class="product-card__image-link" href="product.html?id=5" tabindex="-1" aria-hidden="true">
+                    <picture><source type="image/webp" srcset="images/kettlebell-400.webp 400w, images/kettlebell.webp 800w" sizes="(min-width: 960px) 25vw, (min-width: 640px) 50vw, 100vw"><img class="product-card__image" src="images/kettlebell-400.jpg" srcset="images/kettlebell-400.jpg 400w, images/kettlebell.jpg 800w" sizes="(min-width: 960px) 25vw, (min-width: 640px) 50vw, 100vw" alt="" width="400" height="300" loading="lazy"></picture>
+                </a>
+                <span class="product-card__badge badge badge--hit">Хит</span>
+                <div class="product-card__body">
+                    <p class="product-card__category">Силовые</p>
+                    <h3 class="product-card__title"><a class="product-card__link" href="product.html?id=5">Гиря чугунная 16 кг</a></h3>
+                    <p class="product-card__text">Классическая гиря для рывка, толчка и махов.</p>
+                    <p class="product-card__rating"><span aria-hidden="true">★</span> 4,8<span class="visually-hidden"> из 5</span></p>
+                    <div class="product-card__footer">
+                        <p class="product-card__price">3 990 ₽</p>
+                        <a class="button button--small" href="order.html">В заявку</a>
+                    </div>
+                </div>
+            </article>
+            <article class="product-card">
+                <a class="product-card__image-link" href="product.html?id=7" tabindex="-1" aria-hidden="true">
+                    <picture><source type="image/webp" srcset="images/yoga-mat-400.webp 400w, images/yoga-mat.webp 800w" sizes="(min-width: 960px) 25vw, (min-width: 640px) 50vw, 100vw"><img class="product-card__image" src="images/yoga-mat-400.jpg" srcset="images/yoga-mat-400.jpg 400w, images/yoga-mat.jpg 800w" sizes="(min-width: 960px) 25vw, (min-width: 640px) 50vw, 100vw" alt="" width="400" height="300" loading="lazy"></picture>
+                </a>
+                <span class="product-card__badge badge badge--hit">Хит</span>
+                <div class="product-card__body">
+                    <p class="product-card__category">Фитнес и йога</p>
+                    <h3 class="product-card__title"><a class="product-card__link" href="product.html?id=7">Коврик для йоги 6 мм</a></h3>
+                    <p class="product-card__text">Нескользящий коврик из TPE с ремнём для переноски.</p>
+                    <p class="product-card__rating"><span aria-hidden="true">★</span> 4,7<span class="visually-hidden"> из 5</span></p>
+                    <div class="product-card__footer">
+                        <p class="product-card__price">1 890 ₽</p>
+                        <a class="button button--small" href="order.html">В заявку</a>
+                    </div>
+                </div>
+            </article>
+            <article class="product-card">
+                <a class="product-card__image-link" href="product.html?id=10" tabindex="-1" aria-hidden="true">
+                    <picture><source type="image/webp" srcset="images/football-400.webp 400w, images/football.webp 800w" sizes="(min-width: 960px) 25vw, (min-width: 640px) 50vw, 100vw"><img class="product-card__image" src="images/football-400.jpg" srcset="images/football-400.jpg 400w, images/football.jpg 800w" sizes="(min-width: 960px) 25vw, (min-width: 640px) 50vw, 100vw" alt="" width="400" height="300" loading="lazy"></picture>
+                </a>
+                <span class="product-card__badge badge badge--new">Новинка</span>
+                <div class="product-card__body">
+                    <p class="product-card__category">Командные виды</p>
+                    <h3 class="product-card__title"><a class="product-card__link" href="product.html?id=10">Мяч футбольный, размер 5</a></h3>
+                    <p class="product-card__text">Термосшитый мяч для натурального и искусственного газона.</p>
+                    <p class="product-card__rating"><span aria-hidden="true">★</span> 4,6<span class="visually-hidden"> из 5</span></p>
+                    <div class="product-card__footer">
+                        <p class="product-card__price">2 490 ₽</p>
+                        <a class="button button--small" href="order.html">В заявку</a>
+                    </div>
+                </div>
+            </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--muted" id="reviews" aria-labelledby="reviews-title">
+            <div class="container">
+                <h2 class="section__title" id="reviews-title">Отзывы покупателей</h2>
+                <div class="reviews">
+                <figure class="review">
+                    <blockquote class="review__text">
+                        <p>Взяла коврик для домашних занятий — не скользит и не пахнет. Привезли на следующий день.</p>
+                    </blockquote>
+                    <figcaption class="review__author">Анна <span class="review__product">о товаре «Коврик для йоги 6 мм»</span></figcaption>
+                </figure>
+                <figure class="review">
+                    <blockquote class="review__text">
+                        <p>Занимаюсь гиревым спортом дома: ручка удобная, краска не облезает.</p>
+                    </blockquote>
+                    <figcaption class="review__author">Илья <span class="review__product">о товаре «Гиря чугунная 16 кг»</span></figcaption>
+                </figure>
+                <figure class="review">
+                    <blockquote class="review__text">
+                        <p>Пробежала в них первый полумарафон, ноги в порядке. Размер соответствует.</p>
+                    </blockquote>
+                    <figcaption class="review__author">Марина <span class="review__product">о товаре «Кроссовки для бега»</span></figcaption>
+                </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta__inner">
+                <div>
+                    <h2 class="cta__title" id="cta-title">Не знаете, с чего начать?</h2>
+                    <p class="cta__text">Расскажите о целях — подберём инвентарь под бюджет и уровень подготовки.</p>
+                </div>
+                <button class="button button--large button--light" type="button" data-modal-open="consult-modal">Получить консультацию</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" id="contacts">
+        <div class="container footer__inner">
+            <section class="footer__column" aria-labelledby="footer-about">
+                <h2 class="footer__title" id="footer-about">Рекорд</h2>
+                <p class="footer__text">Спорттовары для тренировок дома, в зале и на стадионе.</p>
+            </section>
+            <nav class="footer__column" aria-labelledby="footer-nav">
+                <h2 class="footer__title" id="footer-nav">Разделы</h2>
+                <ul class="footer__list">
+                    <li><a class="footer__link" href="index.html#advantages">Преимущества</a></li>
+                    <li><a class="footer__link" href="index.html#popular">Популярные товары</a></li>
+                    <li><a class="footer__link" href="index.html#reviews">Отзывы</a></li>
+                    <li><a class="footer__link" href="delivery.html#faq">Вопросы и ответы</a></li>
+                </ul>
+            </nav>
+            <section class="footer__column" aria-labelledby="footer-contacts">
+                <h2 class="footer__title" id="footer-contacts">Контакты</h2>
+                <address class="footer__address">
+                    Москва, пр-т Вернадского, 78, павильон 3<br>
+                    <a class="footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a><br>
+                    <a class="footer__link" href="mailto:shop@rekord.example">shop@rekord.example</a>
+                </address>
+            </section>
+        </div>
+        <div class="container footer__bottom">
+            <p class="footer__copy">© 2026 Рекорд. Учебный проект, товары и цены вымышленные.</p>
+        </div>
+    </footer>
+
+    <a class="to-top" href="#top"><span aria-hidden="true">↑</span><span class="visually-hidden">Наверх страницы</span></a>
+    <dialog class="modal" id="consult-modal" aria-labelledby="consult-title">
+        <form class="modal__content" method="dialog" data-consult-form>
+            <button class="modal__close" type="submit" value="cancel" aria-label="Закрыть окно" formnovalidate>×</button>
+            <h2 class="modal__title" id="consult-title">Подобрать инвентарь</h2>
+            <p class="modal__text">Оставьте телефон — консультант перезвонит в течение 15 минут и поможет с выбором.</p>
+            <div class="form-field">
+                <label class="form-field__label" for="consult-name">Имя</label>
+                <input class="form-field__input" id="consult-name" name="name" type="text" autocomplete="name" required minlength="2">
+            </div>
+            <div class="form-field">
+                <label class="form-field__label" for="consult-phone">Телефон</label>
+                <input class="form-field__input" id="consult-phone" name="phone" type="tel" autocomplete="tel" required
+                       placeholder="+7 900 000-00-00" pattern="[+]?[0-9 ()-]{10,18}" aria-describedby="consult-phone-hint">
+                <p class="form-field__hint" id="consult-phone-hint">10–11 цифр, можно с пробелами и скобками</p>
+            </div>
+            <p class="modal__message" data-consult-message role="status" hidden></p>
+            <button class="button modal__submit" type="submit" value="send">Жду звонка</button>
+        </form>
+    </dialog>
+
+    <script src="js/data.js" defer></script>
+    <script src="js/storage.js" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/product.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>

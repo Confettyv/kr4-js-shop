@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка и оплата — Рекорд</title>
+    <meta name="description" content="Условия доставки и оплаты в магазине «Рекорд»: курьер, самовывоз, пункты выдачи, возврат в течение 30 дней.">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    <header class="header" id="top">
+        <div class="container header__inner">
+            <a class="logo" href="index.html">
+                <span class="logo__mark" aria-hidden="true">R</span>
+                <span class="logo__text">Рекорд</span><span class="visually-hidden"> — на главную</span>
+            </a>
+            <button class="header__toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-nav-toggle>
+                <span class="header__toggle-line" aria-hidden="true"></span>
+                <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <nav class="nav" id="main-nav" aria-label="Основная навигация">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link" href="catalog.html">Каталог</a></li>
+                    <li class="nav__item"><a class="nav__link nav__link--active" href="delivery.html" aria-current="page">Доставка</a></li>
+                    <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <a class="header__cart" href="cart.html">
+                Корзина <span class="header__cart-count" data-cart-count aria-live="polite">0</span>
+            </a>
+            <a class="button button--small header__cta" href="order.html">Оформить заявку</a>
+        </div>
+    </header>
+    <main class="main" id="main">
+        <nav class="breadcrumbs container" aria-label="Хлебные крошки">
+            <ol class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+                <li class="breadcrumbs__item" aria-current="page">Доставка и оплата</li>
+            </ol>
+        </nav>
+        <div class="container page-header">
+            <h1 class="page-header__title">Доставка и оплата</h1>
+            <p class="page-header__text">Три способа получить заказ. Оплата — при получении, картой или наличными.</p>
+        </div>
+        <section class="container section section--tight" aria-labelledby="delivery-table-title">
+            <h2 class="section__title" id="delivery-table-title">Способы доставки</h2>
+            <p class="table-hint" aria-hidden="true">Таблицу можно прокрутить вбок →</p>
+            <div class="table-wrapper" tabindex="0" role="region" aria-label="Сравнение способов доставки">
+                <table class="compare-table">
+                    <caption class="visually-hidden">Сравнение способов доставки</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Способ</th>
+                            <th scope="col">Срок</th>
+                            <th scope="col">Стоимость</th>
+                            <th scope="col">Примерка</th>
+                            <th scope="col">Оплата</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">Курьер по Москве</th><td>на следующий день</td><td>350 ₽, от 5 000 ₽ — бесплатно</td><td>да, 15 минут</td><td>картой или наличными</td></tr>
+                        <tr><th scope="row">Самовывоз из магазина</th><td>в день заказа</td><td>бесплатно</td><td>да</td><td>картой или наличными</td></tr>
+                        <tr><th scope="row">Пункт выдачи по России</th><td>2–7 дней</td><td>от 290 ₽</td><td>нет</td><td>картой онлайн</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="container section section--tight faq" id="faq" aria-labelledby="faq-title">
+            <h2 class="section__title" id="faq-title">Вопросы и ответы</h2>
+            <div class="faq__list">
+                <details class="faq__item">
+                    <summary class="faq__question">Можно ли примерить обувь перед оплатой?</summary>
+                    <p class="faq__answer">Да. Курьер ждёт до 15 минут, пока вы примеряете. Если размер не подошёл, вы платите только за доставку.</p>
+                </details>
+                <details class="faq__item">
+                    <summary class="faq__question">Как выбрать вес гантелей или гири?</summary>
+                    <p class="faq__answer">Для начала подойдут разборные гантели: вес можно менять дисками. Консультант поможет подобрать нагрузку под ваши цели.</p>
+                </details>
+                <details class="faq__item">
+                    <summary class="faq__question">Что делать, если товар не подошёл?</summary>
+                    <p class="faq__answer">Верните его в течение 30 дней в магазин или курьеру. Деньги вернём на карту за 3–5 рабочих дней.</p>
+                </details>
+                <details class="faq__item">
+                    <summary class="faq__question">Есть ли доставка за пределы Москвы?</summary>
+                    <p class="faq__answer">Да, через пункты выдачи по всей России. Срок — от 2 до 7 дней в зависимости от города.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" id="contacts">
+        <div class="container footer__inner">
+            <section class="footer__column" aria-labelledby="footer-about">
+                <h2 class="footer__title" id="footer-about">Рекорд</h2>
+                <p class="footer__text">Спорттовары для тренировок дома, в зале и на стадионе.</p>
+            </section>
+            <nav class="footer__column" aria-labelledby="footer-nav">
+                <h2 class="footer__title" id="footer-nav">Разделы</h2>
+                <ul class="footer__list">
+                    <li><a class="footer__link" href="index.html#advantages">Преимущества</a></li>
+                    <li><a class="footer__link" href="index.html#popular">Популярные товары</a></li>
+                    <li><a class="footer__link" href="index.html#reviews">Отзывы</a></li>
+                    <li><a class="footer__link" href="delivery.html#faq">Вопросы и ответы</a></li>
+                </ul>
+            </nav>
+            <section class="footer__column" aria-labelledby="footer-contacts">
+                <h2 class="footer__title" id="footer-contacts">Контакты</h2>
+                <address class="footer__address">
+                    Москва, пр-т Вернадского, 78, павильон 3<br>
+                    <a class="footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a><br>
+                    <a class="footer__link" href="mailto:shop@rekord.example">shop@rekord.example</a>
+                </address>
+            </section>
+        </div>
+        <div class="container footer__bottom">
+            <p class="footer__copy">© 2026 Рекорд. Учебный проект, товары и цены вымышленные.</p>
+        </div>
+    </footer>
+
+    <a class="to-top" href="#top"><span aria-hidden="true">↑</span><span class="visually-hidden">Наверх страницы</span></a>
+    <dialog class="modal" id="consult-modal" aria-labelledby="consult-title">
+        <form class="modal__content" method="dialog" data-consult-form>
+            <button class="modal__close" type="submit" value="cancel" aria-label="Закрыть окно" formnovalidate>×</button>
+            <h2 class="modal__title" id="consult-title">Подобрать инвентарь</h2>
+            <p class="modal__text">Оставьте телефон — консультант перезвонит в течение 15 минут и поможет с выбором.</p>
+            <div class="form-field">
+                <label class="form-field__label" for="consult-name">Имя</label>
+                <input class="form-field__input" id="consult-name" name="name" type="text" autocomplete="name" required minlength="2">
+            </div>
+            <div class="form-field">
+                <label class="form-field__label" for="consult-phone">Телефон</label>
+                <input class="form-field__input" id="consult-phone" name="phone" type="tel" autocomplete="tel" required
+                       placeholder="+7 900 000-00-00" pattern="[+]?[0-9 ()-]{10,18}" aria-describedby="consult-phone-hint">
+                <p class="form-field__hint" id="consult-phone-hint">10–11 цифр, можно с пробелами и скобками</p>
+            </div>
+            <p class="modal__message" data-consult-message role="status" hidden></p>
+            <button class="button modal__submit" type="submit" value="send">Жду звонка</button>
+        </form>
+    </dialog>
+
+    <script src="js/data.js" defer></script>
+    <script src="js/storage.js" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/product.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>

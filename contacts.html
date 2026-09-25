@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — Рекорд</title>
+    <meta name="description" content="Контакты магазина «Рекорд»: Москва, пр-т Вернадского, 78, павильон 3, +7 (495) 000-00-00. Форма обратной связи.">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    <header class="header" id="top">
+        <div class="container header__inner">
+            <a class="logo" href="index.html">
+                <span class="logo__mark" aria-hidden="true">R</span>
+                <span class="logo__text">Рекорд</span><span class="visually-hidden"> — на главную</span>
+            </a>
+            <button class="header__toggle" type="button" aria-expanded="false" aria-controls="main-nav" data-nav-toggle>
+                <span class="header__toggle-line" aria-hidden="true"></span>
+                <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <nav class="nav" id="main-nav" aria-label="Основная навигация">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link" href="catalog.html">Каталог</a></li>
+                    <li class="nav__item"><a class="nav__link" href="delivery.html">Доставка</a></li>
+                    <li class="nav__item"><a class="nav__link nav__link--active" href="contacts.html" aria-current="page">Контакты</a></li>
+                </ul>
+            </nav>
+            <a class="header__cart" href="cart.html">
+                Корзина <span class="header__cart-count" data-cart-count aria-live="polite">0</span>
+            </a>
+            <a class="button button--small header__cta" href="order.html">Оформить заявку</a>
+        </div>
+    </header>
+    <main class="main" id="main">
+        <nav class="breadcrumbs container" aria-label="Хлебные крошки">
+            <ol class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+                <li class="breadcrumbs__item" aria-current="page">Контакты</li>
+            </ol>
+        </nav>
+        <div class="container page-header">
+            <h1 class="page-header__title">Контакты</h1>
+            <p class="page-header__text">Приезжайте в магазин примерить инвентарь или напишите нам — ответим в течение рабочего дня.</p>
+        </div>
+        <div class="container contacts">
+            <section class="contacts__info" aria-labelledby="contacts-info-title">
+                <h2 class="visually-hidden" id="contacts-info-title">Как с нами связаться</h2>
+                <ul class="contact-list">
+                    <li class="contact-card">
+                        <h3 class="contact-card__title">Адрес</h3>
+                        <p class="contact-card__text">Москва, пр-т Вернадского, 78, павильон 3</p>
+                    </li>
+                    <li class="contact-card">
+                        <h3 class="contact-card__title">Телефон</h3>
+                        <p class="contact-card__text"><a href="tel:+74950000000">+7 (495) 000-00-00</a></p>
+                    </li>
+                    <li class="contact-card">
+                        <h3 class="contact-card__title">Почта</h3>
+                        <p class="contact-card__text"><a href="mailto:shop@rekord.example">shop@rekord.example</a></p>
+                    </li>
+                    <li class="contact-card">
+                        <h3 class="contact-card__title">Режим работы</h3>
+                        <p class="contact-card__text">Ежедневно с 10:00 до 21:00</p>
+                    </li>
+                </ul>
+                <div class="map" role="img" aria-label="Схема проезда: магазин в 5 минутах пешком от метро «Проспект Вернадского»">
+                    <span class="map__pin" aria-hidden="true"></span>
+                    <p class="map__label">Метро «Проспект Вернадского», 5 минут пешком</p>
+                </div>
+            </section>
+            <section class="contacts__form" aria-labelledby="feedback-title">
+                <h2 class="contacts__title" id="feedback-title">Напишите нам</h2>
+                <form class="feedback-form" action="contacts.html" method="post" novalidate data-feedback-form>
+                    <div class="form-field">
+                        <label class="form-field__label" for="feedback-name">Имя</label>
+                        <input class="form-field__input" id="feedback-name" name="name" type="text" autocomplete="name" required minlength="2">
+                    </div>
+                    <div class="form-field">
+                        <label class="form-field__label" for="feedback-email">Эл. почта</label>
+                        <input class="form-field__input" id="feedback-email" name="email" type="email" autocomplete="email" required>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-field__label" for="feedback-message">Сообщение</label>
+                        <textarea class="form-field__input form-field__input--textarea" id="feedback-message" name="message" rows="5" required minlength="10"></textarea>
+                    </div>
+                    <div class="form-message" data-form-message role="status" aria-live="polite" hidden></div>
+                    <button class="button" type="submit">Отправить сообщение</button>
+                </form>
+                <p class="contacts__alt">Хотите сразу заказать товар? <a href="order.html">Оформите заявку</a>.</p>
+            </section>
+        </div>
+    </main>
+    <footer class="footer" id="contacts">
+        <div class="container footer__inner">
+            <section class="footer__column" aria-labelledby="footer-about">
+                <h2 class="footer__title" id="footer-about">Рекорд</h2>
+                <p class="footer__text">Спорттовары для тренировок дома, в зале и на стадионе.</p>
+            </section>
+            <nav class="footer__column" aria-labelledby="footer-nav">
+                <h2 class="footer__title" id="footer-nav">Разделы</h2>
+                <ul class="footer__list">
+                    <li><a class="footer__link" href="index.html#advantages">Преимущества</a></li>
+                    <li><a class="footer__link" href="index.html#popular">Популярные товары</a></li>
+                    <li><a class="footer__link" href="index.html#reviews">Отзывы</a></li>
+                    <li><a class="footer__link" href="delivery.html#faq">Вопросы и ответы</a></li>
+                </ul>
+            </nav>
+            <section class="footer__column" aria-labelledby="footer-contacts">
+                <h2 class="footer__title" id="footer-contacts">Контакты</h2>
+                <address class="footer__address">
+                    Москва, пр-т Вернадского, 78, павильон 3<br>
+                    <a class="footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a><br>
+                    <a class="footer__link" href="mailto:shop@rekord.example">shop@rekord.example</a>
+                </address>
+            </section>
+        </div>
+        <div class="container footer__bottom">
+            <p class="footer__copy">© 2026 Рекорд. Учебный проект, товары и цены вымышленные.</p>
+        </div>
+    </footer>
+
+    <a class="to-top" href="#top"><span aria-hidden="true">↑</span><span class="visually-hidden">Наверх страницы</span></a>
+    <dialog class="modal" id="consult-modal" aria-labelledby="consult-title">
+        <form class="modal__content" method="dialog" data-consult-form>
+            <button class="modal__close" type="submit" value="cancel" aria-label="Закрыть окно" formnovalidate>×</button>
+            <h2 class="modal__title" id="consult-title">Подобрать инвентарь</h2>
+            <p class="modal__text">Оставьте телефон — консультант перезвонит в течение 15 минут и поможет с выбором.</p>
+            <div class="form-field">
+                <label class="form-field__label" for="consult-name">Имя</label>
+                <input class="form-field__input" id="consult-name" name="name" type="text" autocomplete="name" required minlength="2">
+            </div>
+            <div class="form-field">
+                <label class="form-field__label" for="consult-phone">Телефон</label>
+                <input class="form-field__input" id="consult-phone" name="phone" type="tel" autocomplete="tel" required
+                       placeholder="+7 900 000-00-00" pattern="[+]?[0-9 ()-]{10,18}" aria-describedby="consult-phone-hint">
+                <p class="form-field__hint" id="consult-phone-hint">10–11 цифр, можно с пробелами и скобками</p>
+            </div>
+            <p class="modal__message" data-consult-message role="status" hidden></p>
+            <button class="button modal__submit" type="submit" value="send">Жду звонка</button>
+        </form>
+    </dialog>
+
+    <script src="js/data.js" defer></script>
+    <script src="js/storage.js" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/product.js" defer></script>
+    <script src="js/modal.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>
