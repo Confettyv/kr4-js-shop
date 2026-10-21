@@ -200,13 +200,22 @@ function initCatalogPage() {
         }
     });
 
-    form.addEventListener('input', () => {
+    const applyFilters = () => {
         catalogState.search = form.elements.search.value;
         catalogState.category = form.elements.category.value;
         catalogState.sort = form.elements.sort.value;
         catalogState.onlyAvailable = form.elements.onlyAvailable.checked;
         catalogState.page = 1;
         renderCatalog();
+    };
+
+    // Поиск реагирует на каждый введённый символ (input),
+    // а категория, сортировка и флажок наличия — на изменение значения (change).
+    form.elements.search.addEventListener('input', applyFilters);
+    form.addEventListener('change', (event) => {
+        if (event.target !== form.elements.search) {
+            applyFilters();
+        }
     });
 
     form.addEventListener('submit', (event) => event.preventDefault());
